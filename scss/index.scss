@@ -1,0 +1,70 @@
+$color_main: #db5639;
+$color_secondary: #729c38;
+$color_light: #ffd62f;
+$color_dark: #4c4c4c;
+$color_white: #ffffff;
+.bg_main {
+  background-color: $color_main;
+}
+body {
+  font-size: 18px;
+  font-family: "Microsoft JhengHei";
+  background-color: $color_dark;
+}
+header {
+  h1 a {
+    background: url("../images/logo.png") no-repeat center center;
+    background-size: contain;
+    height: 70px;
+
+    @media screen and (max-width: 768px) {
+      height: 50px;
+    }
+  }
+  .nav_btn,
+  .aside_btn {
+    font-size: 26px;
+    line-height: 50px;
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .nav_btn i {
+    color: $color_main;
+  }
+  nav {
+    margin: 0 -15px;
+
+    ul li a {
+      display: block;
+      color: $color_white;
+      text-align: center;
+      margin: 0 0.5rem;
+      padding: 1rem 0.5rem;
+
+      &:hover,
+      &.active {
+        text-decoration: none;
+        color: $color_dark;
+        font-weight: bold;
+        background-color: $color_light;
+      }
+      @media screen and (max-width: 767px) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+aside {
+  @media screen and (max-width: 767px) {
+    position: fixed !important;
+    top: 50px;
+    right: 0;
+    z-index: 10;
+    height: 100%;
+    transform: translateX(99%);
+  }
+}
