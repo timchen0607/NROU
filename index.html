@@ -50,12 +50,16 @@
         </nav>
       </header>
       <div class="row">
-        <article class="col-12 col-md-8 col-xl-9">
-          <div
-            id="carouselExampleFade"
-            class="carousel slide carousel-fade"
-            data-ride="carousel"
-          >
+        <article class="col-12 col-md-8 col-xl-9" id="main">
+          <div id="newsFade" class="carousel slide carousel-fade">
+            <ol class="carousel-indicators">
+              <li data-target="#newsFade" data-slide-to="0" class="active"></li>
+              <li data-target="#newsFade" data-slide-to="1"></li>
+              <li data-target="#newsFade" data-slide-to="2"></li>
+              <li data-target="#newsFade" data-slide-to="3"></li>
+              <li data-target="#newsFade" data-slide-to="4"></li>
+              <li data-target="#newsFade" data-slide-to="5"></li>
+            </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="./images/news/new_01.jpg" class="img-fluid" />
@@ -76,29 +80,11 @@
                 <img src="./images/news/new_06.jpg" class="img-fluid" />
               </div>
             </div>
-            <a
-              class="carousel-control-prev"
-              href="#carouselExampleFade"
-              role="button"
-              data-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Previous</span>
+            <a class="carousel-control-prev" href="#newsFade" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
             </a>
-            <a
-              class="carousel-control-next"
-              href="#carouselExampleFade"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Next</span>
+            <a class="carousel-control-next" href="#newsFade" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
             </a>
           </div>
         </article>
