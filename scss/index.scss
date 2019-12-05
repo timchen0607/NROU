@@ -11,6 +11,8 @@ body {
   background-color: $color_dark;
 }
 header {
+  margin: 0 -15px;
+
   h1 a {
     background: url("../images/logo.png") no-repeat center center;
     background-size: contain;
@@ -37,7 +39,6 @@ header {
     color: $color_contrast_dark;
   }
   nav {
-    margin: 0 -15px;
     background-color: $color_main;
 
     ul li a {
@@ -62,6 +63,12 @@ header {
 }
 
 #main {
+  h2 {
+    margin: 10px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $color_contrast_dark;
+  }
   #newsFade {
     .carousel-indicators {
       li {
@@ -78,6 +85,26 @@ header {
     }
     @media screen and (max-width: 767px) {
       margin: 0 -15px;
+    }
+  }
+  #focus .card {
+    h3 {
+      color: $color_contrast;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 1.5rem;
+
+      a {
+        color: $color_contrast;
+        &:hover {
+          color: $color_main;
+          text-decoration: none;
+        }
+      }
+      &:hover {
+        color: $color_main;
+      }
     }
   }
 }
@@ -111,8 +138,8 @@ header {
     position: fixed !important;
     top: 50px;
     right: 0;
-    z-index: 10;
-    height: 100%;
+    z-index: 20;
+    height: calc(100% - 50px);
     transform: translateX(100%);
     transition: transform 0.5s;
 
