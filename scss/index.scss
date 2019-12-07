@@ -1,15 +1,25 @@
-$color_main: #db5639;
-$color_contrast: #00cc99;
-$color_contrast_dark: #268663;
-$color_light: #ffd62f;
-$color_dark: #4c4c4c;
-$color_white: #ffffff;
+$c_main: #db5639;
+$c_contrast: #00cc99;
+$c_contrast_dark: #268663;
+$c_light: #ffd62f;
+$c_dark: #4c4c4c;
+$c_white: #ffffff;
 
 body {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Microsoft JhengHei";
-  background-color: $color_dark;
+  background-color: $c_dark;
 }
+.t_main {
+  color: $c_main;
+}
+.t_contrast {
+  color: $c_contrast;
+}
+.t_contrast_dark {
+  color: $c_contrast_dark;
+}
+
 header {
   margin: 0 -15px;
 
@@ -22,8 +32,8 @@ header {
       height: 50px;
     }
   }
-  .nav_btn,
-  .aside_btn {
+  #nav_btn,
+  #aside_btn {
     font-size: 26px;
     line-height: 50px;
     border: none;
@@ -32,28 +42,23 @@ header {
       box-shadow: none;
     }
   }
-  .nav_btn i {
-    color: $color_main;
-  }
-  .aside_btn i {
-    color: $color_contrast_dark;
-  }
   nav {
-    background-color: $color_main;
+    background-color: $c_main;
 
     ul li a {
       display: block;
-      color: $color_white;
+      color: $c_white;
       text-align: center;
+      font-size: 1.1rem;
       margin: 0 0.5rem;
       padding: 1rem 0.5rem;
 
       &:hover,
       &.active {
         text-decoration: none;
-        color: $color_dark;
+        color: $c_dark;
         font-weight: bold;
-        background-color: $color_light;
+        background-color: $c_light;
       }
       @media screen and (max-width: 767px) {
         margin: 0;
@@ -63,13 +68,7 @@ header {
 }
 
 #main {
-  h2 {
-    margin: 10px 0;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: $color_contrast_dark;
-  }
-  #newsFade {
+  #carousel {
     .carousel-indicators {
       li {
         display: block;
@@ -79,7 +78,7 @@ header {
         border-radius: 50%;
 
         &.active {
-          background-color: $color_contrast_dark;
+          background-color: $c_contrast_dark;
         }
       }
     }
@@ -87,51 +86,62 @@ header {
       margin: 0 -15px;
     }
   }
-  #focus .card {
-    h3 {
-      color: $color_contrast;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-size: 1.5rem;
+  h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .more {
+    cursor: pointer;
+    color: $c_contrast;
 
-      a {
-        color: $color_contrast;
-        &:hover {
-          color: $color_main;
-          text-decoration: none;
-        }
-      }
+    &:hover {
+      color: $c_contrast_dark;
+    }
+  }
+  .card h3 {
+    color: $c_contrast;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    a {
+      color: $c_contrast;
       &:hover {
-        color: $color_main;
+        color: $c_main;
+        text-decoration: none;
       }
+    }
+    &:hover {
+      color: $c_main;
     }
   }
 }
 
 #aside {
-  background-color: $color_white;
+  background-color: $c_white;
 
   ul li a {
     display: block;
     width: calc(100% - 20px);
     margin: 10px;
     padding: 8px 10px;
-    color: $color_dark;
+    color: $c_dark;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    border: 1px solid $color_contrast_dark;
+    border: 1px solid $c_contrast_dark;
     border-radius: 3px;
 
     &:hover {
-      color: $color_white;
-      background-color: $color_contrast;
-      border-color: $color_contrast;
+      color: $c_white;
+      background-color: $c_contrast;
+      border-color: $c_contrast;
     }
     &.title {
-      color: $color_white;
-      background-color: $color_contrast_dark;
+      color: $c_white;
+      background-color: $c_contrast_dark;
     }
   }
   @media screen and (max-width: 767px) {
