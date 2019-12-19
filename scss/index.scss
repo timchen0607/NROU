@@ -140,6 +140,28 @@ header {
         border-style: none;
       }
     }
+    .list-group {
+      border: 1px solid $c_contrast_dark;
+      border-color: transparent $c_contrast_dark;
+
+      .list-group-item {
+        cursor: pointer;
+        border-bottom: 1px dotted $c_contrast_dark;
+
+        &:hover {
+          font-weight: bold;
+
+          span {
+            color: $c_contrast_dark;
+          }
+        }
+        @media screen and (max-width: 767px) {
+          &:nth-child(1) {
+            border-top: 1px dotted $c_contrast_dark;
+          }
+        }
+      }
+    }
   }
 }
 
