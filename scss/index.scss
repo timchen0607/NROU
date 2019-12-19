@@ -121,6 +121,26 @@ header {
       color: $c_main;
     }
   }
+  #info {
+    .nav-link {
+      color: $c_contrast;
+      border-bottom-color: $c_contrast_dark;
+
+      &.active {
+        color: $c_white;
+        background-color: $c_contrast_dark;
+        border-color: $c_contrast_dark $c_contrast_dark transparent;
+        font-weight: bold;
+      }
+    }
+    .nav-pills .nav-link {
+      border: 1px dashed $c_contrast;
+
+      &.active {
+        border-style: none;
+      }
+    }
+  }
 }
 
 #aside {
